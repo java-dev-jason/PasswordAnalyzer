@@ -33,7 +33,7 @@ A simple Java-based password analysis tool that checks how secure or predictable
 ---
 
 ## 📌 Example Output
-Password: Luna2004!
+Password: Luna2006!
 Name Found: true
 Found in Duden: false
 Found Year: true
