@@ -1,23 +1,31 @@
-# 🛡️ PasswordAnalyzer
-A simple Java-based password analysis tool that checks how secure or predictable a password might be.
+# 🔐 Java Password Strength Analyzer
+A console-based Java program that analyzes the strength of a given password using common-sense heuristics and wordlists. The program checks if the password contains names, dictionary words, years, special characters, and capital letters, then rates it from 1 to 5.
 
 ---
 
-## ✅ Features
-- Checks if the password contains:
-   - A known first name (Namelist.txt)
-   - A common dictionary word (Duden.txt)
-   - A 4-digit year (e.g., 1999, 2024)
-   - Special characters (Character.txt)
-   - Uppercase letters (Letters.txt)
-     
-- Modular code design
+## 🚀 Features
+🔍 Name Detection — Checks if the password contains a common name (from Namelist.txt)
 
-- Uses external .txt files for scalable checks
+📖 Dictionary Check — Searches for German words (via Duden.txt)
 
-- Console-based interface (CLI)
+📅 Year Pattern Matching — Detects if a year (e.g. 1989, 2003) is used
 
-- Written in plain Java (no libraries)
+✨ Special Character Detection — Boosts strength if special symbols are used
+
+🔠 Capital Letter Check — Rewards use of uppercase letters
+
+📊 Password Strength Rating — Final score from 1 (weak) to 5 (strong)
+
+---
+## 🧠 How it works
+
+| Criteria                    | Effect on Rating |
+| --------------------------- | ---------------- |
+| Name found in list          | −1               |
+| Word found in dictionary    | −1               |
+| Year (e.g. 1989) found      | −1               |
+| Contains special characters | +1               |
+| Contains uppercase letters  | +1               |
 
 ---
 
@@ -33,21 +41,27 @@ A simple Java-based password analysis tool that checks how secure or predictable
 ---
 
 ## 📌 Example Output
-Password: Luna2006!
-Name Found: true
+Name Found: false
 Found in Duden: false
-Found Year: true
+Found Year: false
 Has Special Character: true
 Has big Letters: true
+Your password is a: 5/5
 
 ---
 
-## 🚧 Planned Features
--  Password strength rating (e.g., 1–10)
+## 🛠 Getting Started
+Clone the repository
 
-- Suggestions for stronger passwords
+Place the wordlist .txt files in the src/ directory
 
-- GUI (optional)
+Compile and run the program:
+
+bash
+Kopieren
+javac Main.java
+java Main
+Enter a password when prompted and see the analysis.
 
 ---
 
